@@ -1,0 +1,16 @@
+PODS:
+  - yytestpod (0.1.5)
+
+DEPENDENCIES:
+  - yytestpod (= 0.1.5)
+
+SPEC REPOS:
+  https://github.com/hxxyyangyong/yyspec.git:
+    - yytestpod
+
+SPEC CHECKSUMS:
+  yytestpod: 4167dbe4b363b01bc9c6a20f6b09111806ed74a7
+
+PODFILE CHECKSUM: 66b5e1cf90ad84368ead083707150be63f0b9330
+
+COCOAPODS: 1.10.1
