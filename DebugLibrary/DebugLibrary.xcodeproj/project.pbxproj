@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6580655E2934B779002AF3D5 /* YYSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6580655D2934B779002AF3D5 /* YYSwift.swift */; };
+		6580655F2934BC4E002AF3D5 /* DebugLibrary-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 6580655C2934B778002AF3D5 /* DebugLibrary-Bridging-Header.h */; };
+		658065602934BC6F002AF3D5 /* YYSwift.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6580655D2934B779002AF3D5 /* YYSwift.swift */; };
+		658065612934BC6F002AF3D5 /* DebugLibrary-Bridging-Header.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6580655C2934B778002AF3D5 /* DebugLibrary-Bridging-Header.h */; };
 		659812E1291251CA001CC56D /* DebugLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 659812E0291251CA001CC56D /* DebugLibrary.m */; };
 		659812E2291251CA001CC56D /* DebugLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 659812DF291251CA001CC56D /* DebugLibrary.h */; };
 		659812EE2912534E001CC56D /* NSString+librarykmm.m in Sources */ = {isa = PBXBuildFile; fileRef = 659812ED2912534E001CC56D /* NSString+librarykmm.m */; };
@@ -20,6 +24,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				658065602934BC6F002AF3D5 /* YYSwift.swift in CopyFiles */,
+				658065612934BC6F002AF3D5 /* DebugLibrary-Bridging-Header.h in CopyFiles */,
 				659812EF2912540B001CC56D /* NSString+librarykmm.h in CopyFiles */,
 				659812E2291251CA001CC56D /* DebugLibrary.h in CopyFiles */,
 			);
@@ -28,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6580655C2934B778002AF3D5 /* DebugLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DebugLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
+		6580655D2934B779002AF3D5 /* YYSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSwift.swift; sourceTree = "<group>"; };
 		659812DC291251CA001CC56D /* libDebugLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDebugLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		659812DF291251CA001CC56D /* DebugLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugLibrary.h; sourceTree = "<group>"; };
 		659812E0291251CA001CC56D /* DebugLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugLibrary.m; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 				659812E0291251CA001CC56D /* DebugLibrary.m */,
 				659812EC2912534E001CC56D /* NSString+librarykmm.h */,
 				659812ED2912534E001CC56D /* NSString+librarykmm.m */,
+				6580655D2934B779002AF3D5 /* YYSwift.swift */,
+				6580655C2934B778002AF3D5 /* DebugLibrary-Bridging-Header.h */,
 			);
 			path = DebugLibrary;
 			sourceTree = "<group>";
@@ -104,6 +114,7 @@
 				TargetAttributes = {
 					659812DB291251CA001CC56D = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -130,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6580655F2934BC4E002AF3D5 /* DebugLibrary-Bridging-Header.h in Sources */,
+				6580655E2934B779002AF3D5 /* YYSwift.swift in Sources */,
 				659812E1291251CA001CC56D /* DebugLibrary.m in Sources */,
 				659812EE2912534E001CC56D /* NSString+librarykmm.m in Sources */,
 			);
@@ -251,10 +264,20 @@
 		659812E6291251CA001CC56D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DebugLibrary/DebugLibrary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -262,10 +285,19 @@
 		659812E7291251CA001CC56D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DebugLibrary/DebugLibrary-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
